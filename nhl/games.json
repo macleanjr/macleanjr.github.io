@@ -11,6 +11,36 @@
 			"home":"Devils",
 			"away":"Senators",
 			"date":"4/12"
+		},
+		{
+			"gameid":"4",
+			"home":"MapleLeafs",
+			"away":"Canadians",
+			"date":"4/13"
+		},
+		{
+			"gameid":"5",
+			"home":"Islanders",
+			"away":"Rangers",
+			"date":"4/13"
+		},
+		{
+			"gameid":"6",
+			"home":"Capitals",
+			"away":"Lightning",
+			"date":"4/13"
+		},
+		{
+			"gameid":"7",
+			"home":"Hurricanes",
+			"away":"Bruins",
+			"date":"4/13"
+		},
+		{
+			"gameid":"8",
+			"home":"Panthers",
+			"away":"Penguins",
+			"date":"4/13"
 		}
    	]
 }
