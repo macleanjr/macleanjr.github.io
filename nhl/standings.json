@@ -3,19 +3,19 @@
   		{
    			"name":"Sabres",
 			"points":"38",
-			"gp":"40",
+			"gp":"41",
 			"division":"northeast"
    		},
    		{
 			"name":"Bruins",
 			"points":"56",
-			"gp":"39",
+			"gp":"40",
 			"division":"northeast"
    		},
    		{
 			"name":"Canadians",
-			"points":"55",
-			"gp":"39",
+			"points":"57",
+			"gp":"40",
 			"division":"northeast"
    		},
    		{
@@ -26,44 +26,44 @@
    		},
    		{
 			"name":"Senators",
-			"points":"44",
-			"gp":"39",
+			"points":"46",
+			"gp":"40",
 			"division":"northeast"
    		},
    		{
 			"name":"Capitals",
-			"points":"44",
-			"gp":"40",
+			"points":"46",
+			"gp":"41",
 			"division":"southeast"
    		},
    		{
 			"name":"Jets",
-			"points":"42",
-			"gp":"41",
+			"points":"44",
+			"gp":"42",
 			"division":"southeast"
    		},
    		{
 			"name":"Hurricanes",
 			"points":"34",
-			"gp":"39",
+			"gp":"40",
 			"division":"southeast"
    		},
    		{
 			"name":"Lightning",
 			"points":"36",
-			"gp":"39",
+			"gp":"40",
 			"division":"southeast"
    		},
    		{
 			"name":"Panthers",
 			"points":"32",
-			"gp":"39",
+			"gp":"40",
 			"division":"southeast"
    		},
    		{
 			"name":"Penguins",
-			"points":"60",
-			"gp":"40",
+			"points":"62",
+			"gp":"41",
 			"division":"atlantic"
    		},
    		{
@@ -81,13 +81,13 @@
    		{
 			"name":"Flyers",
 			"points":"37",
-			"gp":"39",
+			"gp":"40",
 			"division":"atlantic"
    		},
    		{
 			"name":"Islanders",
-			"points":"44",
-			"gp":"40",
+			"points":"46",
+			"gp":"41",
 			"division":"atlantic"
    		}
    	]
