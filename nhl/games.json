@@ -1,0 +1,16 @@
+{
+  "games":[
+  		{
+			"gameid":"1",
+			"home":"Sabres",
+			"away":"Canadians",
+			"date":"4/11"
+   		},
+		{
+			"gameid":"2",
+			"home":"Sabres",
+			"away":"Flyers",
+			"date":"4/13"
+		}
+   	]
+}
