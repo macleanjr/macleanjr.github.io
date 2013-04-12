@@ -8,6 +8,11 @@ font-family:Arial;
 .game{
 	font-size:8pt;
 	border:1px solid;
+	margin:2px;
+	width:55px;
+	padding:3px;
+	text-align:center;
+	float:left;
 }
 .team{
 background-color:#ccc;
@@ -157,8 +162,8 @@ $(document).click(function(){
 
 $.getJSON('games.json', function(data){
 	$.each(data.games, function(i,v){
-		$('#' + this.home).append('<div id="' + this.home + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'" style="margin:2px;width:50px;padding:3px;text-align:center;float:left;">' + this.date + ' ' + this.away + '</div>');
-		$('#' + this.away).append('<div id="' + this.away + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'" style="margin:2px;width:50px;padding:3px;text-align:center;float:left;">' + this.date + ' ' + this.home + '</div>');
+		$('#' + this.home).append('<div id="' + this.home + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + ' ' + this.away + '</div>');
+		$('#' + this.away).append('<div id="' + this.away + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + ' ' + this.home + '</div>');
 	});
 });
 
@@ -351,60 +356,60 @@ console.log("atlantic: " + atlantic.name);
 </div>
 
 <div id="whatifs" style="float:left;padding-left:10px;margin-left:300px">
-	<div id="Sabres" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Sabres" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Sabres</div>
 	</div>
-	<div id="Canadians" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Canadians" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Canadians</div>
 	</div>
-	<div id="Flyers" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Flyers" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Flyers</div>
 
 	</div>
-	<div id="Devils" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Devils" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Devils</div>
 
 	</div>
-	<div id="Senators" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Senators" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Senators</div>
 
 	</div>
-	<div id="Penguins" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Penguins" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Penguins</div>
 
 	</div>
-	<div id="Rangers" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Rangers" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Rangers</div>
 
 	</div>
-	<div id="Hurricanes" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Hurricanes" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Hurricanes</div>
 
 	</div>
-	<div id="MapleLeafs" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="MapleLeafs" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">MapleLeafs</div>
 
 	</div>
-	<div id="Islanders" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Islanders" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Islanders</div>
 
 	</div>
-	<div id="Panthers" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Panthers" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Panthers</div>
 
 	</div>
-	<div id="Bruins" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Bruins" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Bruins</div>
 
 	</div>
-	<div id="Capitals" style="float:left;border:1px solid black;width:240px;height:250px;">
+	<div id="Capitals" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Capitals</div>
 	</div>
-		<div id="Lightning" style="float:left;border:1px solid black;width:240px;height:250px;">
+		<div id="Lightning" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Lightning</div>
 
 	</div>
-		<div id="Jets" style="float:left;border:1px solid black;width:240px;height:250px;">
+		<div id="Jets" style="float:left;border:1px solid black;width:240px;height:200px;">
 		<div style="text-align:center;width:100%;">Jets</div>
 
 	</div>
