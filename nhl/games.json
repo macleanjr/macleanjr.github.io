@@ -41,6 +41,31 @@
 			"home":"Panthers",
 			"away":"Penguins",
 			"date":"4/13"
+		},
+		{
+			"gameid":"9",
+			"home":"Buffalo",
+			"away":"Lightning",
+			"date":"4/14"
+		},
+		{
+			"gameid":"10",
+			"home":"Bruins",
+			"away":"Senators",
+			"date":"4/15"
+		}
+		,
+		{
+			"gameid":"11",
+			"home":"MapleLeafs",
+			"away":"Devils",
+			"date":"4/15"
+		},
+		{
+			"gameid":"12",
+			"home":"Senators",
+			"away":"Flyers",
+			"date":"4/15"
 		}
    	]
 }
