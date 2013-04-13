@@ -184,7 +184,7 @@ function sortTeams(){
 	$.each(easternConferenceStandings, function(){
 		//console.log(this.rank);
 		var pixels = (this.rank-1)*30+10;
-		$('#'+this.name+'rank').animate({top: pixels+"px"}, 1000, function(){});
+		$('#'+this.name+'rank').animate({top: pixels+"px"}, 500, function(){});
 	});
 }
 
@@ -339,8 +339,10 @@ console.log("atlantic: " + atlantic.name);
 
 	}
 
-	if(!standingsBuilt)
+	if(!standingsBuilt){
 		standingsBuilt = true;
+		$('#Standings').append('<div style="float:left;">Note: Tiebreakers not in effect.</div>');
+	}
 	console.log(easternConferenceStandings);
 	sortTeams();
 
