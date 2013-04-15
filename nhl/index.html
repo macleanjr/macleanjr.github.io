@@ -3,7 +3,9 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <style type="text/css">
 body{
-font-family:Arial;
+	font-family:Arial;
+	margin:0;
+	padding:0;
 }
 .game{
 	font-size:8pt;
@@ -13,13 +15,21 @@ font-family:Arial;
 	padding:3px;
 	text-align:center;
 	float:left;
+	cursor:pointer;
 }
 .team{
-background-color:#ccc;
-border:1px solid #777;
-width:250px;
-margin:5px;
-position:absolute;
+	background-color:#ccc;
+	border:1px solid #777;
+	width:250px;
+	margin:5px;
+	position:absolute;
+}
+.teamgames{
+	margin:1px;
+	float:left;
+	border:1px solid black;
+	width:210px;
+	height:200px;
 }
 .nostatus{
 border:1px solid black;
@@ -37,384 +47,76 @@ background-color:#98FB98;
 background-color:#FB9898;
 }
 </style>
-<script type="text/javascript">
+<script type="text/javascript" src="js/nhlwhatif.js"></script>
 
-var easternConferenceStandings = [];
-var standingsBuilt = false;
-
-$(document).ready(function(){
-
-$(document).click(function(event){
-
-  var div = $(event.target);
-
-	if($(event.target).hasClass("game")){
-		var gameid;
-		var classes = $(div).attr("class").split(" ");
-		for(var i=0;i<classes.length;i++){
-			if(classes[i] != "game" && classes[i] != "win" && classes[i] != "lose" && classes[i] != "win-overtime" && classes[i] != "lose-overtime" && classes[i] != "nostatus"){
-				gameid = classes[i];
-			}
-		}
-		//console.log(gameid);
-		var otherdiv;
-		$('.' + gameid).each(function(){
-			if($(this).attr('id') != $(div).attr('id')){
-				otherdiv = $(this);
-			}
-		});
-
-
-		if($(div).hasClass("nostatus")){
-			console.log('nostatus');
-			$(div).removeClass("nostatus").addClass("win");
-			$(otherdiv).removeClass("nostatus").addClass("lose");
-
-			//need to add 2 points to the winner
-			var winner = $(div).parent().attr('id');
-			$.each(easternConferenceStandings, function(){
-				if(this.name == winner){
-					console.log("points is " + this.points);
-					var points = this.points;
-					this.points = parseInt(this.points) + 2;
-					console.log("points is " + this.points);
-				}
-			});
-			
-		}	
-		else if($(div).hasClass("win")){
-			$(div).removeClass("win").addClass("win-overtime");
-			$(otherdiv).removeClass("lose").addClass("lose-overtime");
-			//need to add 1 point to the loser
-			var loser = $(otherdiv).parent().attr('id');
-			$.each(easternConferenceStandings, function(){
-				if(this.name == loser){
-					var points = this.points;
-					this.points = parseInt(this.points) + 1;
-					console.log(this.points);
-				}
-			});
-		}
-		else if($(div).hasClass("win-overtime")){
-			$(div).removeClass("win-overtime").addClass("lose");
-			$(otherdiv).removeClass("lose-overtime").addClass("win");
-			//need to add 1 point to the former loser andd subtract two from former winner
-			var thisguy = $(div).parent().attr('id');
-			$.each(easternConferenceStandings, function(){
-				if(this.name == thisguy){
-					var points = this.points;
-					this.points = parseInt(this.points) - 2;
-					console.log(this.points);
-				}
-			});
-			var otherguy = $(otherdiv).parent().attr('id');
-			$.each(easternConferenceStandings, function(){
-				if(this.name == otherguy){
-					var points = this.points;
-					this.points = parseInt(this.points) + 1;
-					console.log(this.points);
-				}
-			});
-		}
-		else if($(div).hasClass("lose")){
-			$(div).removeClass("lose").addClass("lose-overtime");
-			$(otherdiv).removeClass("win").addClass("win-overtime");
-			//need to add 1 point to the former loser andd subtract two from former winner
-			var thisguy = $(div).parent().attr('id');
-			$.each(easternConferenceStandings, function(){
-				if(this.name == thisguy){
-					var points = this.points;
-					this.points = parseInt(this.points) +1;
-					console.log(this.points);
-				}
-			});
-		}
-		else if($(div).hasClass("lose-overtime")){
-			$(div).removeClass("lose-overtime").addClass("nostatus");
-			$(otherdiv).removeClass("win-overtime").addClass("nostatus");
-			//need to add 1 point to the former loser andd subtract two from former winner
-			var thisguy = $(div).parent().attr('id');
-			$.each(easternConferenceStandings, function(){
-				if(this.name == thisguy){
-					var points = this.points;
-					this.points = parseInt(this.points) -1;
-					console.log(this.points);
-				}
-			});
-			var otherguy = $(otherdiv).parent().attr('id');
-			$.each(easternConferenceStandings, function(){
-				if(this.name == otherguy){
-					var points = this.points;
-					this.points = parseInt(this.points) -2;
-					console.log(this.points);
-				}
-			});
-		}
-
-		calculateStandings(easternConferenceStandings);
-
-		//console.log("Belongs to " + $(event.target).parent().attr('id'));
-	}
-
-});
-
-
-
-$.getJSON('games.json', function(data){
-	$.each(data.games, function(i,v){
-		$('#' + this.home).append('<div id="' + this.home + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.away + '</div>');
-		$('#' + this.away).append('<div id="' + this.away + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.home + '</div>');
-	});
-});
-
-
-
-
-$.getJSON('standings.json', function(data) {
-	calculateStandings(data.teams);
-});
-
-
-
-
-
-});
-function sortTeams(){
-
-	$.each(easternConferenceStandings, function(){
-		//console.log(this.rank);
-		var pixels = (this.rank-1)*30+10;
-		$('#'+this.name+'rank').animate({top: pixels+"px"}, 500, function(){});
-	});
-}
-
-function calculateStandings(theStandings){
-	console.log("the standings");
-	console.log(theStandings);
-	easternConferenceStandings = [];
-	var standings = theStandings;
-	var northeast, northeastI, southeast, southeastI, atlantic = null, atlanticI = null;
-	$.each(standings, function(i,v){
-		if(this.division == "northeast"){
-			if(northeast == null){
-				northeast = this;
-				northeastI = i;
-			}
-			else if(this.points > northeast.points){
-				northeast = this;
-				northeastI = i;
-			}
-			else if(this.points == northeast.points){
-				//TODO: Tiebreakers
-				northeast = this;
-				northeastI = i;
-			}
-		}
-		else if(this.division == "southeast"){
-			if(southeast == null){
-				southeast = this;
-				southeastI = i;
-			}
-			else if(this.points > southeast.points){
-				southeast = this;
-				southeastI = i;
-			}
-			else if(this.points == southeast.points){
-				//TODO: Tiebreakers
-				southeast = this;
-				southeastI = i;
-			}
-		}
-		else if(this.division == "atlantic"){
-			if(atlantic == null){
-				atlantic = this;
-				atlanticI = i;
-			}
-			else if(this.points > atlantic.points){
-				atlantic = this;
-				atlanticI = i;
-			}
-			else if(this.points == atlantic.points){
-				//TODO: Tiebreakers
-				atlantic = this;
-				atlanticI = i;
-			}
-		}
-	});
-	$.each(standings, function(i,v){
-		if(this.name == atlantic.name)
-			standings.splice(i,1);
-	});
-	$.each(standings, function(i,v){
-		if(this.name == northeast.name)
-			standings.splice(i,1);
-	});
-	$.each(standings, function(i,v){
-		if(this.name == southeast.name)
-			standings.splice(i,1);
-	});
-
-	console.log("standings are " + standings);
-
-	//build the top three
-	var topTeams = [];
-console.log("northeast: " + northeast.name);
-console.log("southeast: " + southeast.name);
-console.log("atlantic: " + atlantic.name);
-	topTeams.push(northeast);
-	topTeams.push(southeast);
-	topTeams.push(atlantic);
-	console.log("Top Teams:");
-	console.log(topTeams);
-
-	//lets build the standings
-	for(var i=0;i<3;i++){
-		var topTeam = null;
-		var topTeamIndex = null;
-		$.each(topTeams, function(i,v){
-			console.log("i is " + i);
-			if(topTeam == null){
-				topTeam = this;
-				topTeamIndex = i;
-			}
-			else if(this.points > topTeam.points){
-				topTeam = this;
-				topTeamIndex = i;
-			}
-			else if(this.points == topTeam.points){
-				//TODO Tiebreakers
-				topTeam = this;
-				topTeamIndex = i;
-			}
-		});
-		if(!standingsBuilt)
-			$('#standings').append('<div class="team" id="' + topTeam.name + 'rank">' + topTeam.name + '<div class="points" style="float:right;">' + topTeam.points + '</div></div>');
-		else{
-			$('#'+topTeam.name+'rank .points').html(topTeam.points);
-		}
-
-		topTeams.splice(topTeamIndex,1);
-		
-
-		topTeam.rank = i+1;
-
-		console.log("pushing " + topTeam.name + " as rank " + topTeam.rank);
-		easternConferenceStandings.push(topTeam);
-	}
-
-
-	//lets build the standings
-	for(var i=0;i<12;i++){
-
-		var topTeam = null;
-		var topTeamIndex;
-		console.log(standings[0]);
-		$.each(standings, function(i,v){
-			//console.log("Evaluating team " + this.name);
-			if(topTeam == null){
-				topTeam = this;
-				topTeamIndex = i;
-			}
-			else if(this.points > topTeam.points){
-				topTeam = this;
-				topTeamIndex = i;
-			}
-			else if(this.points == topTeam.points){
-				//TODO Tiebreakers
-				topTeam = this;
-				topTeamIndex = i;
-			}
-		});
-		if(!standingsBuilt){
-			$('#standings').append('<div class="team" id="' + topTeam.name + 'rank">' + topTeam.name + '<div class="points" style="float:right;">' + topTeam.points + '</div></div>');
-			if(i == 4)
-				$('#standings').append('<hr style="position:absolute;top:251px;width:245px;margin-top:-3px;margin-bottom:-3px;margin-left:8px;color: #000;background-color: #000;height: 3px;"/>');
-		}
-		else{
-			$('#'+topTeam.name+'rank .points').html(topTeam.points);
-		}
-		standings.splice(topTeamIndex,1);
-		topTeam.rank = i+4;
-		easternConferenceStandings.push(topTeam);
-
-	}
-
-	if(!standingsBuilt){
-		standingsBuilt = true;
-		$('#standings').append('<div style="position:absolute;top:500px;">Note: Tiebreakers not in effect.<br/>Click on a game to toggle the result.<br/><a href="http://twitter.com/macleanjr">@macleanjr</a><br/>macleajr@gmail.com</div>');
-	}
-	console.log(easternConferenceStandings);
-	sortTeams();
-
-}
-
-
-
-</script>
 </head>
 <body>
+<div id="wrapper" style="text-align:center;width:100%;">
+<div id="nhlwhatif" style="width:960px;display:inline-block;">
 <div id="standings" style="width:250px;float:left;padding:10px;">
 
 </div>
 
 <div id="whatifs" style="float:left;padding-left:10px;margin-left:300px">
-	<div id="Sabres" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Sabres" class="teamgames">
 		<div style="text-align:center;width:100%;">Sabres</div>
 	</div>
-	<div id="Canadians" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Canadians" class="teamgames">
 		<div style="text-align:center;width:100%;">Canadians</div>
 	</div>
-	<div id="Flyers" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Flyers" class="teamgames">
 		<div style="text-align:center;width:100%;">Flyers</div>
 
 	</div>
-	<div id="Devils" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Devils" class="teamgames">
 		<div style="text-align:center;width:100%;">Devils</div>
 
 	</div>
-	<div id="Senators" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Senators" class="teamgames">
 		<div style="text-align:center;width:100%;">Senators</div>
 
 	</div>
-	<div id="Penguins" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Penguins" class="teamgames">
 		<div style="text-align:center;width:100%;">Penguins</div>
 
 	</div>
-	<div id="Rangers" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Rangers" class="teamgames">
 		<div style="text-align:center;width:100%;">Rangers</div>
 
 	</div>
-	<div id="Hurricanes" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Hurricanes" class="teamgames">
 		<div style="text-align:center;width:100%;">Hurricanes</div>
 
 	</div>
-	<div id="MapleLeafs" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="MapleLeafs" class="teamgames">
 		<div style="text-align:center;width:100%;">MapleLeafs</div>
 
 	</div>
-	<div id="Islanders" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Islanders" class="teamgames">
 		<div style="text-align:center;width:100%;">Islanders</div>
 
 	</div>
-	<div id="Panthers" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Panthers" class="teamgames">
 		<div style="text-align:center;width:100%;">Panthers</div>
 
 	</div>
-	<div id="Bruins" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Bruins" class="teamgames">
 		<div style="text-align:center;width:100%;">Bruins</div>
 
 	</div>
-	<div id="Capitals" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Capitals" class="teamgames">
 		<div style="text-align:center;width:100%;">Capitals</div>
 	</div>
-		<div id="Lightning" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Lightning" class="teamgames">
 		<div style="text-align:center;width:100%;">Lightning</div>
 
 	</div>
-		<div id="Jets" style="float:left;border:1px solid black;width:240px;height:200px;">
+	<div id="Jets" class="teamgames">
 		<div style="text-align:center;width:100%;">Jets</div>
 
 	</div>
+</div>
+</div>
 </div>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
