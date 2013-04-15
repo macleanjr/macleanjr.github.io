@@ -25,7 +25,6 @@ $(document).click(function(event){
 
 
 		if($(div).hasClass("nostatus")){
-			console.log('nostatus');
 			$(div).removeClass("nostatus").addClass("win");
 			$(otherdiv).removeClass("nostatus").addClass("lose");
 
@@ -33,10 +32,10 @@ $(document).click(function(event){
 			var winner = $(div).parent().attr('id');
 			$.each(easternConferenceStandings, function(){
 				if(this.name == winner){
-					console.log("points is " + this.points);
+
 					var points = this.points;
 					this.points = parseInt(this.points) + 2;
-					console.log("points is " + this.points);
+
 				}
 			});
 			
@@ -63,7 +62,6 @@ $(document).click(function(event){
 				if(this.name == thisguy){
 					var points = this.points;
 					this.points = parseInt(this.points) - 2;
-					console.log(this.points);
 				}
 			});
 			var otherguy = $(otherdiv).parent().attr('id');
@@ -71,7 +69,7 @@ $(document).click(function(event){
 				if(this.name == otherguy){
 					var points = this.points;
 					this.points = parseInt(this.points) + 1;
-					console.log(this.points);
+
 				}
 			});
 		}
@@ -84,7 +82,6 @@ $(document).click(function(event){
 				if(this.name == thisguy){
 					var points = this.points;
 					this.points = parseInt(this.points) +1;
-					console.log(this.points);
 				}
 			});
 		}
@@ -97,7 +94,6 @@ $(document).click(function(event){
 				if(this.name == thisguy){
 					var points = this.points;
 					this.points = parseInt(this.points) -1;
-					console.log(this.points);
 				}
 			});
 			var otherguy = $(otherdiv).parent().attr('id');
@@ -105,14 +101,11 @@ $(document).click(function(event){
 				if(this.name == otherguy){
 					var points = this.points;
 					this.points = parseInt(this.points) -2;
-					console.log(this.points);
 				}
 			});
 		}
 
 		calculateStandings(easternConferenceStandings);
-
-		//console.log("Belongs to " + $(event.target).parent().attr('id'));
 	}
 
 });
@@ -148,8 +141,7 @@ function sortTeams(){
 }
 
 function calculateStandings(theStandings){
-	console.log("the standings");
-	console.log(theStandings);
+
 	easternConferenceStandings = [];
 	var standings = theStandings;
 	var northeast, northeastI, southeast, southeastI, atlantic = null, atlanticI = null;
@@ -213,25 +205,21 @@ function calculateStandings(theStandings){
 			standings.splice(i,1);
 	});
 
-	console.log("standings are " + standings);
 
 	//build the top three
 	var topTeams = [];
-console.log("northeast: " + northeast.name);
-console.log("southeast: " + southeast.name);
-console.log("atlantic: " + atlantic.name);
+
 	topTeams.push(northeast);
 	topTeams.push(southeast);
 	topTeams.push(atlantic);
-	console.log("Top Teams:");
-	console.log(topTeams);
+
 
 	//lets build the standings
 	for(var i=0;i<3;i++){
 		var topTeam = null;
 		var topTeamIndex = null;
 		$.each(topTeams, function(i,v){
-			console.log("i is " + i);
+
 			if(topTeam == null){
 				topTeam = this;
 				topTeamIndex = i;
@@ -257,7 +245,7 @@ console.log("atlantic: " + atlantic.name);
 
 		topTeam.rank = i+1;
 
-		console.log("pushing " + topTeam.name + " as rank " + topTeam.rank);
+
 		easternConferenceStandings.push(topTeam);
 	}
 
@@ -267,7 +255,7 @@ console.log("atlantic: " + atlantic.name);
 
 		var topTeam = null;
 		var topTeamIndex;
-		console.log(standings[0]);
+
 		$.each(standings, function(i,v){
 			//console.log("Evaluating team " + this.name);
 			if(topTeam == null){
@@ -302,7 +290,6 @@ console.log("atlantic: " + atlantic.name);
 		standingsBuilt = true;
 		$('#standings').append('<div style="position:absolute;top:500px;text-align:left;">Note: Tiebreakers not in effect.<br/>Click on a game to toggle the result.<br/><a href="http://twitter.com/macleanjr">@macleanjr</a><br/>macleajr@gmail.com</div>');
 	}
-	console.log(easternConferenceStandings);
 	sortTeams();
 
 }
