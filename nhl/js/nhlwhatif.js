@@ -46,7 +46,7 @@ $(document).click(function(event){
 			var loser = $(otherdiv).parent().attr('id');
 			$.each(easternConferenceStandings, function(){
 				if(this.name == loser){
-					this.gp = parseInt(this.points) + 1;
+					this.gp = parseInt(this.gp) + 1;
 				}
 			});
 			
@@ -352,8 +352,9 @@ function calculateStandings(theStandings){
 				topTeamIndex = i;
 			}
 			else if(this.points == topTeam.points){
-				//console.log("comparing " + this.name + "(" + this.gp + ") and " + this.name + "(" + this.gp + ")");
+				console.log("comparing " + this.name + "(" + this.gp + ") and " + topTeam.name + "(" + topTeam.gp + ")");
 				if(this.gp < topTeam.gp){
+					console.log("assigning top team " + this.name);
 					topTeam = this;
 					topTeamIndex = i;
 				}
