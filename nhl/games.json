@@ -1,18 +1,5 @@
 {
   "games":[
-
-		{
-			"gameid":"11",
-			"home":"MapleLeafs",
-			"away":"Devils",
-			"date":"4/15"
-		},
-		{
-			"gameid":"12",
-			"home":"Canadiens",
-			"away":"Flyers",
-			"date":"4/15"
-		},
 		{
 			"gameid":"13",
 			"home":"Islanders",
