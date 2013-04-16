@@ -9,7 +9,7 @@
 		},
 		{
 			"gameid":"12",
-			"home":"Canadians",
+			"home":"Canadiens",
 			"away":"Flyers",
 			"date":"4/15"
 		},
@@ -46,7 +46,7 @@
 		{
 			"gameid":"18",
 			"home":"Penguins",
-			"away":"Canadians",
+			"away":"Canadiens",
 			"date":"4/17"
 		},
 		{
@@ -69,7 +69,7 @@
 		},
 		{
 			"gameid":"22",
-			"home":"Canadians",
+			"home":"Canadiens",
 			"away":"Lightning",
 			"date":"4/18"
 		},
@@ -117,7 +117,7 @@
 		},
 		{
 			"gameid":"30",
-			"home":"Canadians",
+			"home":"Canadiens",
 			"away":"Capitals",
 			"date":"4/20"
 		},
@@ -172,7 +172,7 @@
 		{
 			"gameid":"39",
 			"home":"Devils",
-			"away":"Canadians",
+			"away":"Canadiens",
 			"date":"4/23"
 		},
 		{
@@ -256,7 +256,7 @@
 		{
 			"gameid":"53",
 			"home":"MapleLeafs",
-			"away":"Canadians",
+			"away":"Canadiens",
 			"date":"4/27"
 		},
 		{
