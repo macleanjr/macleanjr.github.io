@@ -288,7 +288,7 @@ function calculateStandings(theStandings){
 
 	if(!standingsBuilt){
 		standingsBuilt = true;
-		$('#standings').append('<div style="position:absolute;top:500px;text-align:left;">Note: Tiebreakers not in effect.<br/>Click on a game to toggle the result.<br/><a href="http://twitter.com/macleanjr">@macleanjr</a><br/>macleajr@gmail.com</div>');
+		//$('#standings').append('<div style="position:absolute;top:500px;text-align:left;">Note: Tiebreakers not in effect.<br/>Click on a game to toggle the result.<br/><a href="http://twitter.com/macleanjr">@macleanjr</a><br/>macleajr@gmail.com</div>');
 	}
 	sortTeams();
 
