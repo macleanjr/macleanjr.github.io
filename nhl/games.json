@@ -1,12 +1,6 @@
 {
   "games":[
-		{
-			"gameid":"10",
-			"home":"Bruins",
-			"away":"Senators",
-			"date":"TBA"
-		}
-		,
+
 		{
 			"gameid":"11",
 			"home":"MapleLeafs",
@@ -288,6 +282,12 @@
 			"home":"Lightning",
 			"away":"Panthers",
 			"date":"4/27"
+		},		{
+			"gameid":"10",
+			"home":"Bruins",
+			"away":"Senators",
+			"date":"4/28"
 		}
+		
    	]
 }
