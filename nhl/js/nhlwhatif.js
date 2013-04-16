@@ -352,9 +352,9 @@ function calculateStandings(theStandings){
 				topTeamIndex = i;
 			}
 			else if(this.points == topTeam.points){
-				console.log("comparing " + this.name + "(" + this.gp + ") and " + topTeam.name + "(" + topTeam.gp + ")");
+				//console.log("comparing " + this.name + "(" + this.gp + ") and " + topTeam.name + "(" + topTeam.gp + ")");
 				if(this.gp < topTeam.gp){
-					console.log("assigning top team " + this.name);
+					//console.log("assigning top team " + this.name);
 					topTeam = this;
 					topTeamIndex = i;
 				}
