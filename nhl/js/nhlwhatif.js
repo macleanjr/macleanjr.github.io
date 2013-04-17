@@ -304,9 +304,12 @@ function calculateStandings(theStandings){
 				topTeamIndex = i;
 			}
 			else if(this.points == topTeam.points){
-				if(this.gp < topTeam.gp){
+				if(topTeam.gp > this.gp){
 					topTeam = this;
 					topTeamIndex = i;
+				}
+				else if(topTeam.gp < this.gp){
+					//leave the top team
 				}
 				else if(this.row > topTeam.row){
 					topTeam = this;
@@ -353,10 +356,12 @@ function calculateStandings(theStandings){
 			}
 			else if(this.points == topTeam.points){
 				//console.log("comparing " + this.name + "(" + this.gp + ") and " + topTeam.name + "(" + topTeam.gp + ")");
-				if(this.gp < topTeam.gp){
-					//console.log("assigning top team " + this.name);
+				if(topTeam.gp > this.gp){
 					topTeam = this;
 					topTeamIndex = i;
+				}
+				else if(topTeam.gp < this.gp){
+					//leave the top team
 				}
 				else if(this.row > topTeam.row){
 					topTeam = this;
