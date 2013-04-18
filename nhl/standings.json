@@ -2,85 +2,85 @@
   "teams":[
   		{
    			"name":"Sabres",
-			"points":"42",
-			"gp":"43",
+			"points":"44",
+			"gp":"44",
 			"row":"13",
 			"division":"northeast"
    		},
    		{
 			"name":"Bruins",
-			"points":"56",
-			"gp":"41",
+			"points":"57",
+			"gp":"42",
 			"row":"22",
 			"division":"northeast"
    		},
    		{
 			"name":"Canadiens",
 			"points":"57",
-			"gp":"42",
+			"gp":"43",
 			"row":"23",
 			"division":"northeast"
    		},
    		{
 			"name":"MapleLeafs",
 			"points":"53",
-			"gp":"42",
+			"gp":"43",
 			"row":"24",
 			"division":"northeast"
    		},
    		{
 			"name":"Senators",
-			"points":"48",
-			"gp":"41",
-			"row":"17",
+			"points":"50",
+			"gp":"42",
+			"row":"18",
 			"division":"northeast"
    		},
    		{
 			"name":"Capitals",
-			"points":"48",
-			"gp":"42",
-			"row":"20",
+			"points":"50",
+			"gp":"43",
+			"row":"21",
 			"division":"southeast"
    		},
    		{
 			"name":"Jets",
-			"points":"44",
-			"gp":"42",
+			"points":"46",
+			"gp":"43",
 			"row":"20",
 			"division":"southeast"
    		},
    		{
 			"name":"Hurricanes",
 			"points":"36",
-			"gp":"41",
+			"gp":"42",
 			"row":"17",
 			"division":"southeast"
    		},
    		{
 			"name":"Lightning",
-			"points":"37",
-			"gp":"42",
+			"points":"38",
+			"gp":"43",
 			"row":"16",
 			"division":"southeast"
    		},
    		{
 			"name":"Panthers",
 			"points":"32",
-			"gp":"41",
+			"gp":"42",
 			"row":"10",
 			"division":"southeast"
    		},
    		{
 			"name":"Penguins",
-			"points":"64",
-			"gp":"42",
-			"row":"29",
+			"points":"66",
+			"gp":"43",
+			"row":"30",
 			"division":"atlantic"
    		},
    		{
 			"name":"Rangers",
 			"points":"46",
-			"gp":"41",
+			"gp":"42",
 			"row":"17",
 			"division":"atlantic"
    		},
@@ -93,15 +93,15 @@
    		},
    		{
 			"name":"Flyers",
-			"points":"39",
-			"gp":"42",
-			"row":"17",
+			"points":"41",
+			"gp":"43",
+			"row":"18",
 			"division":"atlantic"
    		},
    		{
 			"name":"Islanders",
-			"points":"47",
-			"gp":"42",
+			"points":"49",
+			"gp":"43",
 			"row":"18",
 			"division":"atlantic"
    		}
