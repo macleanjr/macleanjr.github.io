@@ -1,47 +1,6 @@
 {
   "games":[
-		{
-			"gameid":"13",
-			"home":"Islanders",
-			"away":"Panthers",
-			"date":"4/16"
-		},
-		{
-			"gameid":"14",
-			"home":"Capitals",
-			"away":"MapleLeafs",
-			"date":"4/16"
-		},
-		{
-			"gameid":"15",
-			"home":"Senators",
-			"away":"Hurricanes",
-			"date":"4/16"
-		},
-		{
-			"gameid":"16",
-			"home":"Flyers",
-			"away":"Rangers",
-			"date":"4/16"
-		},
-		{
-			"gameid":"17",
-			"home":"Jets",
-			"away":"Lightning",
-			"date":"4/16"
-		},
-		{
-			"gameid":"18",
-			"home":"Penguins",
-			"away":"Canadiens",
-			"date":"4/17"
-		},
-		{
-			"gameid":"19",
-			"home":"Bruins",
-			"away":"Sabres",
-			"date":"4/17"
-		},
+
 		{
 			"gameid":"20",
 			"home":"MapleLeafs",
