@@ -157,7 +157,7 @@ $(document).click(function(event){
 
 
 
-$.getJSON('games.json', function(data){
+$.getJSON('games.json?version=1', function(data){
 	$.each(data.games, function(i,v){
 		$('#' + this.home).append('<div id="' + this.home + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.away + '</div>');
 		$('#' + this.away).append('<div id="' + this.away + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.home + '</div>');
@@ -167,7 +167,7 @@ $.getJSON('games.json', function(data){
 
 
 
-$.getJSON('standings.json', function(data) {
+$.getJSON('standings.json?version=1', function(data) {
 	calculateStandings(data.teams);
 });
 
