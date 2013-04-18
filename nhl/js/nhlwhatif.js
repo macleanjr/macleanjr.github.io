@@ -1,5 +1,64 @@
 var easternConferenceStandings = [];
 var standingsBuilt = false;
+var buildlist = false;
+
+function switchToWest(){
+
+	$('#listofteams').html("");
+	standingsBuilt = false;
+	$('#standings').html("");
+	buildlist = false;
+
+	$.getJSON('standings_west.json?version=1', function(data) {
+		if(!buildlist){
+			buildlist = true;
+			//need to build the list of teams
+			$.each(data.teams, function(){
+				$('#listofteams').append('<div id="' + this.name + '" class="teamgames"><div style="text-align:center;width:100%;">' + this.name + '</div></div>');
+			});
+			$.getJSON('games_west.json?version=2', function(data){
+				$.each(data.games, function(i,v){
+					$('#' + this.home).append('<div id="' + this.home + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.away + '</div>');
+					$('#' + this.away).append('<div id="' + this.away + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.home + '</div>');
+				});
+			});
+		}
+		calculateStandings(data.teams);
+	});
+
+	$('#conferenceSwitcher').html('<a href="#east" onclick="switchToEast();">Take me back East</a>');
+
+}
+
+function switchToEast(){
+
+	$('#listofteams').html("");
+	standingsBuilt = false;
+	$('#standings').html("");
+	buildlist = false;
+
+	$.getJSON('standings.json?version=1', function(data) {
+		if(!buildlist){
+			buildlist = true;
+			//need to build the list of teams
+			$.each(data.teams, function(){
+				$('#listofteams').append('<div id="' + this.name + '" class="teamgames"><div style="text-align:center;width:100%;">' + this.name + '</div></div>');
+			});
+			$.getJSON('games.json?version=2', function(data){
+				$.each(data.games, function(i,v){
+					$('#' + this.home).append('<div id="' + this.home + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.away + '</div>');
+					$('#' + this.away).append('<div id="' + this.away + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.home + '</div>');
+				});
+			});
+		}
+		calculateStandings(data.teams);
+	});
+
+	$('#conferenceSwitcher').html('<a href="#west" onclick="switchToWest();">Take me out West</a>');
+
+
+
+}
 
 $(document).ready(function(){
 
@@ -156,19 +215,23 @@ $(document).click(function(event){
 });
 
 
+$.getJSON('standings.json?version=1', function(data) {
+	if(!buildlist){
+		buildlist = true;
+		//need to build the list of teams
+		$.each(data.teams, function(){
+			$('#listofteams').append('<div id="' + this.name + '" class="teamgames"><div style="text-align:center;width:100%;">' + this.name + '</div></div>');
+		});
+	}
+	calculateStandings(data.teams);
+});
+
 
 $.getJSON('games.json?version=2', function(data){
 	$.each(data.games, function(i,v){
 		$('#' + this.home).append('<div id="' + this.home + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.away + '</div>');
 		$('#' + this.away).append('<div id="' + this.away + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.home + '</div>');
 	});
-});
-
-
-
-
-$.getJSON('standings.json?version=1', function(data) {
-	calculateStandings(data.teams);
 });
 
 
@@ -201,9 +264,12 @@ function calculateStandings(theStandings){
 				northeastI = i;
 			}
 			else if(this.points == northeast.points){
-				if(this.gp < northeast.gp){
+				if(northeast.gp > this.gp){
 					northeast = this;
 					northeastI = i;
+				}
+				else if(northeast.gp < this.gp){
+					//do nothing
 				}
 				else if(this.row > northeast.row){
 					northeast = this;
@@ -226,9 +292,12 @@ function calculateStandings(theStandings){
 				southeastI = i;
 			}
 			else if(this.points == southeast.points){
-				if(this.gp < southeast.gp){
+				if(southeast.gp > this.gp){
 					southeast = this;
 					southeastI = i;
+				}
+				else if(southeast.gp < this.gp){
+					//do nothing
 				}
 				else if(this.row > southeast.row){
 					southeast = this;
@@ -251,9 +320,12 @@ function calculateStandings(theStandings){
 				atlanticI = i;
 			}
 			else if(this.points == atlantic.points){
-				if(this.gp < atlantic.gp){
+				if(atlantic.gp > this.gp){
 					atlantic = this;
 					atlanticI = i;
+				}
+				else if(atlantic.gp < this.gp){
+					//do nothing
 				}
 				else if(this.row > atlantic.row){
 					atlantic = this;
