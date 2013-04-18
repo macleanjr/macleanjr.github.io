@@ -188,6 +188,12 @@
 			"date":"4/25"
 		},
 		{
+			"gameid":"57",
+			"home":"Jets",
+			"away":"Canadiens",
+			"date":"4/25"
+		},
+		{
 			"gameid":"51",
 			"home":"Sabres",
 			"away":"Islanders",
@@ -222,11 +228,18 @@
 			"home":"Lightning",
 			"away":"Panthers",
 			"date":"4/27"
-		},		{
+		},		
+		{
 			"gameid":"10",
 			"home":"Bruins",
 			"away":"Senators",
 			"date":"4/28"
+		},
+		{
+			"gameid":"58",
+			"home":"Penguins",
+			"away":"Hurricanes",
+			"date":"4/27"
 		}
 		
    	]
