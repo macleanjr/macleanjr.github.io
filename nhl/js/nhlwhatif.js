@@ -2,6 +2,7 @@ var easternConferenceStandings = [];
 var standingsBuilt = false;
 var buildlist = false;
 
+
 function switchToWest(){
 
 	$('#listofteams').html("");
@@ -61,6 +62,8 @@ function switchToEast(){
 }
 
 $(document).ready(function(){
+
+$("body").disableSelection(); //so it's not annoying when clicking fast.
 
 $(document).click(function(event){
 
@@ -467,3 +470,12 @@ function calculateStandings(theStandings){
 	sortTeams();
 
 }
+
+(function($){
+    $.fn.disableSelection = function() {
+        return this
+                 .attr('unselectable', 'on')
+                 .css('user-select', 'none')
+                 .on('selectstart', false);
+    };
+})(jQuery);
