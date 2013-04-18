@@ -10,14 +10,14 @@ function switchToWest(){
 	$('#standings').html("");
 	buildlist = false;
 
-	$.getJSON('standings_west.json?version=1', function(data) {
+	$.getJSON('standings_west.json?version=2', function(data) {
 		if(!buildlist){
 			buildlist = true;
 			//need to build the list of teams
 			$.each(data.teams, function(){
 				$('#listofteams').append('<div id="' + this.name + '" class="teamgames"><div style="text-align:center;width:100%;">' + this.name + '</div></div>');
 			});
-			$.getJSON('games_west.json?version=2', function(data){
+			$.getJSON('games_west.json?version=3', function(data){
 				$.each(data.games, function(i,v){
 					$('#' + this.home).append('<div id="' + this.home + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.away + '</div>');
 					$('#' + this.away).append('<div id="' + this.away + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.home + '</div>');
@@ -38,14 +38,14 @@ function switchToEast(){
 	$('#standings').html("");
 	buildlist = false;
 
-	$.getJSON('standings.json?version=1', function(data) {
+	$.getJSON('standings.json?version=2', function(data) {
 		if(!buildlist){
 			buildlist = true;
 			//need to build the list of teams
 			$.each(data.teams, function(){
 				$('#listofteams').append('<div id="' + this.name + '" class="teamgames"><div style="text-align:center;width:100%;">' + this.name + '</div></div>');
 			});
-			$.getJSON('games.json?version=2', function(data){
+			$.getJSON('games.json?version=3', function(data){
 				$.each(data.games, function(i,v){
 					$('#' + this.home).append('<div id="' + this.home + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.away + '</div>');
 					$('#' + this.away).append('<div id="' + this.away + 'game' + this.gameid + '" class="game nostatus game'+this.gameid+'">' + this.date + '<br/>' + this.home + '</div>');
