@@ -2,30 +2,6 @@
   "games":[
 
 		{
-			"gameid":"1",
-			"home":"Blues",
-			"away":"Coyotes",
-			"date":"4/18"
-		},
-		{
-			"gameid":"2",
-			"home":"Stars",
-			"away":"Canucks",
-			"date":"4/18"
-		},
-		{
-			"gameid":"3",
-			"home":"Kings",
-			"away":"BlueJackets",
-			"date":"4/18"
-		},
-		{
-			"gameid":"4",
-			"home":"Sharks",
-			"away":"Wild",
-			"date":"4/18"
-		},
-		{
 			"gameid":"5",
 			"home":"Blues",
 			"away":"Stars",
