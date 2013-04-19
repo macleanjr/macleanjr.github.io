@@ -4,7 +4,7 @@
 			"gameid":"26",
 			"home":"Bruins",
 			"away":"Penguins",
-			"date":"4/19"
+			"date":"4/20"
 		},
 		{
 			"gameid":"27",
@@ -36,12 +36,7 @@
 			"away":"MapleLeafs",
 			"date":"4/20"
 		},
-		{
-			"gameid":"32",
-			"home":"Penguins",
-			"away":"Sabres",
-			"date":"4/20"
-		},
+
 		{
 			"gameid":"33",
 			"home":"Hurricanes",
@@ -77,6 +72,12 @@
 			"home":"Senators",
 			"away":"Penguins",
 			"date":"4/22"
+		},
+		{
+			"gameid":"32",
+			"home":"Penguins",
+			"away":"Sabres",
+			"date":"4/23"
 		},
 		{
 			"gameid":"39",
