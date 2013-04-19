@@ -16,57 +16,57 @@
    		},
    		{
 			"name":"Canadiens",
-			"points":"57",
-			"gp":"43",
-			"row":"23",
+			"points":"59",
+			"gp":"44",
+			"row":"24",
 			"division":"northeast"
    		},
    		{
 			"name":"MapleLeafs",
 			"points":"53",
-			"gp":"43",
+			"gp":"44",
 			"row":"24",
 			"division":"northeast"
    		},
    		{
 			"name":"Senators",
-			"points":"50",
-			"gp":"42",
-			"row":"18",
+			"points":"52",
+			"gp":"43",
+			"row":"19",
 			"division":"northeast"
    		},
    		{
 			"name":"Capitals",
 			"points":"50",
-			"gp":"43",
+			"gp":"44",
 			"row":"21",
 			"division":"southeast"
    		},
    		{
 			"name":"Jets",
-			"points":"46",
-			"gp":"43",
-			"row":"20",
+			"points":"48",
+			"gp":"44",
+			"row":"21",
 			"division":"southeast"
    		},
    		{
 			"name":"Hurricanes",
-			"points":"36",
-			"gp":"42",
+			"points":"37",
+			"gp":"43",
 			"row":"17",
 			"division":"southeast"
    		},
    		{
 			"name":"Lightning",
 			"points":"38",
-			"gp":"43",
+			"gp":"44",
 			"row":"16",
 			"division":"southeast"
    		},
    		{
 			"name":"Panthers",
 			"points":"32",
-			"gp":"42",
+			"gp":"43",
 			"row":"10",
 			"division":"southeast"
    		},
@@ -79,30 +79,30 @@
    		},
    		{
 			"name":"Rangers",
-			"points":"46",
-			"gp":"42",
-			"row":"17",
+			"points":"48",
+			"gp":"43",
+			"row":"18",
 			"division":"atlantic"
    		},
    		{
 			"name":"Devils",
-			"points":"40",
-			"gp":"42",
-			"row":"13",
+			"points":"42",
+			"gp":"43",
+			"row":"14",
 			"division":"atlantic"
    		},
    		{
 			"name":"Flyers",
 			"points":"41",
-			"gp":"43",
+			"gp":"44",
 			"row":"18",
 			"division":"atlantic"
    		},
    		{
 			"name":"Islanders",
-			"points":"49",
-			"gp":"43",
-			"row":"18",
+			"points":"51",
+			"gp":"44",
+			"row":"20",
 			"division":"atlantic"
    		}
    	]
