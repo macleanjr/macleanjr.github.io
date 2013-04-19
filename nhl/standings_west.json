@@ -9,15 +9,15 @@
    		},
    		{
 			"name":"Blues",
-			"points":"50",
-			"gp":"42",
+			"points":"52",
+			"gp":"43",
 			"row":"20",
 			"division":"northeast"
    		},
    		{
 			"name":"BlueJackets",
 			"points":"49",
-			"gp":"44",
+			"gp":"45",
 			"row":"16",
 			"division":"northeast"
    		},
@@ -38,14 +38,14 @@
    		{
 			"name":"Canucks",
 			"points":"55",
-			"gp":"43",
+			"gp":"44",
 			"row":"20",
 			"division":"southeast"
    		},
    		{
 			"name":"Wild",
 			"points":"51",
-			"gp":"43",
+			"gp":"44",
 			"row":"20",
 			"division":"southeast"
    		},
@@ -79,29 +79,29 @@
    		},
    		{
 			"name":"Kings",
-			"points":"53",
-			"gp":"43",
-			"row":"22",
+			"points":"55",
+			"gp":"44",
+			"row":"23",
 			"division":"atlantic"
    		},
    		{
 			"name":"Sharks",
-			"points":"53",
-			"gp":"43",
-			"row":"15",
+			"points":"55",
+			"gp":"44",
+			"row":"16",
 			"division":"atlantic"
    		},
    		{
 			"name":"Stars",
-			"points":"45",
-			"gp":"42",
-			"row":"19",
+			"points":"47",
+			"gp":"43",
+			"row":"20",
 			"division":"atlantic"
    		},
    		{
 			"name":"Coyotes",
-			"points":"43",
-			"gp":"42",
+			"points":"44",
+			"gp":"43",
 			"row":"15",
 			"division":"atlantic"
    		}
