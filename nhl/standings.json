@@ -3,7 +3,7 @@
   		{
    			"name":"Sabres",
 			"points":"44",
-			"gp":"44",
+			"gp":"45",
 			"row":"13",
 			"division":"northeast"
    		},
@@ -79,8 +79,8 @@
    		},
    		{
 			"name":"Rangers",
-			"points":"48",
-			"gp":"43",
+			"points":"50",
+			"gp":"44",
 			"row":"18",
 			"division":"atlantic"
    		},
