@@ -2,30 +2,6 @@
   "games":[
 
 		{
-			"gameid":"5",
-			"home":"Blues",
-			"away":"Stars",
-			"date":"4/19"
-		},
-		{
-			"gameid":"6",
-			"home":"Blackhawks",
-			"away":"Predators",
-			"date":"4/19"
-		},
-		{
-			"gameid":"7",
-			"home":"Avalanche",
-			"away":"Oilers",
-			"date":"4/19"
-		},
-		{
-			"gameid":"8",
-			"home":"Flames",
-			"away":"Ducks",
-			"date":"4/19"
-		},
-		{
 			"gameid":"9",
 			"home":"Blackhawks",
 			"away":"Coyotes",
