@@ -3,105 +3,105 @@
   		{
    			"name":"Sabres",
 			"points":"44",
-			"gp":"45",
+			"gp":"46",
 			"row":"13",
 			"division":"northeast"
    		},
    		{
 			"name":"Bruins",
-			"points":"57",
-			"gp":"42",
-			"row":"22",
+			"points":"59",
+			"gp":"44",
+			"row":"23",
 			"division":"northeast"
    		},
    		{
 			"name":"Canadiens",
 			"points":"59",
-			"gp":"44",
+			"gp":"45",
 			"row":"24",
 			"division":"northeast"
    		},
    		{
 			"name":"MapleLeafs",
-			"points":"53",
-			"gp":"44",
-			"row":"24",
+			"points":"55",
+			"gp":"45",
+			"row":"25",
 			"division":"northeast"
    		},
    		{
 			"name":"Senators",
 			"points":"52",
-			"gp":"43",
+			"gp":"45",
 			"row":"19",
 			"division":"northeast"
    		},
    		{
 			"name":"Capitals",
-			"points":"50",
-			"gp":"44",
-			"row":"21",
+			"points":"52",
+			"gp":"45",
+			"row":"22",
 			"division":"southeast"
    		},
    		{
 			"name":"Jets",
-			"points":"48",
-			"gp":"44",
-			"row":"21",
+			"points":"51",
+			"gp":"46",
+			"row":"22",
 			"division":"southeast"
    		},
    		{
 			"name":"Hurricanes",
-			"points":"37",
-			"gp":"43",
-			"row":"17",
+			"points":"39",
+			"gp":"45",
+			"row":"18",
 			"division":"southeast"
    		},
    		{
 			"name":"Lightning",
 			"points":"38",
-			"gp":"44",
+			"gp":"45",
 			"row":"16",
 			"division":"southeast"
    		},
    		{
 			"name":"Panthers",
 			"points":"32",
-			"gp":"43",
+			"gp":"45",
 			"row":"10",
 			"division":"southeast"
    		},
    		{
 			"name":"Penguins",
-			"points":"66",
-			"gp":"43",
-			"row":"30",
+			"points":"70",
+			"gp":"45",
+			"row":"32",
 			"division":"atlantic"
    		},
    		{
 			"name":"Rangers",
-			"points":"50",
-			"gp":"44",
-			"row":"18",
+			"points":"52",
+			"gp":"45",
+			"row":"20",
 			"division":"atlantic"
    		},
    		{
 			"name":"Devils",
-			"points":"42",
-			"gp":"43",
-			"row":"14",
+			"points":"44",
+			"gp":"45",
+			"row":"15",
 			"division":"atlantic"
    		},
    		{
 			"name":"Flyers",
-			"points":"41",
-			"gp":"44",
-			"row":"18",
+			"points":"43",
+			"gp":"45",
+			"row":"19",
 			"division":"atlantic"
    		},
    		{
 			"name":"Islanders",
-			"points":"51",
-			"gp":"44",
+			"points":"53",
+			"gp":"45",
 			"row":"20",
 			"division":"atlantic"
    		}
