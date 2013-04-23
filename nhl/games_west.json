@@ -2,66 +2,6 @@
   "games":[
 
 		{
-			"gameid":"9",
-			"home":"Blackhawks",
-			"away":"Coyotes",
-			"date":"4/20"
-		},
-		{
-			"gameid":"10",
-			"home":"Canucks",
-			"away":"RedWings",
-			"date":"4/20"
-		},
-		{
-			"gameid":"11",
-			"home":"Wild",
-			"away":"Flames",
-			"date":"4/21"
-		},
-		{
-			"gameid":"12",
-			"home":"Avalanche",
-			"away":"Blues",
-			"date":"4/21"
-		},
-		{
-			"gameid":"13",
-			"home":"Sharks",
-			"away":"BlueJackets",
-			"date":"4/21"
-		},
-		{
-			"gameid":"14",
-			"home":"Oilers",
-			"away":"Ducks",
-			"date":"4/21"
-		},
-		{
-			"gameid":"15",
-			"home":"Kings",
-			"away":"Stars",
-			"date":"4/21"
-		},
-		{
-			"gameid":"16",
-			"home":"RedWings",
-			"away":"Coyotes",
-			"date":"4/22"
-		},
-		{
-			"gameid":"17",
-			"home":"Oilers",
-			"away":"Ducks",
-			"date":"4/22"
-		},
-		{
-			"gameid":"18",
-			"home":"Canucks",
-			"away":"Blackhawks",
-			"date":"4/22"
-		},
-		{
 			"gameid":"19",
 			"home":"Blues",
 			"away":"Avalanche",
