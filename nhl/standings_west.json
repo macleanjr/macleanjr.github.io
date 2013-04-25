@@ -2,16 +2,16 @@
   "teams":[
   		{
    			"name":"Blackhawks",
-			"points":"73",
-			"gp":"45",
-			"row":"28",
+			"points":"75",
+			"gp":"46",
+			"row":"29",
 			"division":"northeast"
    		},
    		{
 			"name":"Blues",
-			"points":"54",
-			"gp":"45",
-			"row":"21",
+			"points":"56",
+			"gp":"46",
+			"row":"22",
 			"division":"northeast"
    		},
    		{
@@ -23,16 +23,16 @@
    		},
    		{
 			"name":"RedWings",
-			"points":"50",
-			"gp":"45",
-			"row":"19",
+			"points":"52",
+			"gp":"46",
+			"row":"20",
 			"division":"northeast"
    		},
    		{
 			"name":"Predators",
-			"points":"39",
-			"gp":"45",
-			"row":"13",
+			"points":"41",
+			"gp":"46",
+			"row":"14",
 			"division":"northeast"
    		},
    		{
@@ -44,29 +44,29 @@
    		},
    		{
 			"name":"Wild",
-			"points":"51",
-			"gp":"45",
-			"row":"20",
+			"points":"53",
+			"gp":"46",
+			"row":"21",
 			"division":"southeast"
    		},
    		{
 			"name":"Oilers",
 			"points":"41",
-			"gp":"45",
+			"gp":"46",
 			"row":"15",
 			"division":"southeast"
    		},
    		{
 			"name":"Flames",
 			"points":"42",
-			"gp":"45",
+			"gp":"46",
 			"row":"19",
 			"division":"southeast"
    		},
    		{
 			"name":"Avalanche",
 			"points":"37",
-			"gp":"45",
+			"gp":"46",
 			"row":"14",
 			"division":"southeast"
    		},
@@ -80,29 +80,29 @@
    		{
 			"name":"Kings",
 			"points":"57",
-			"gp":"45",
+			"gp":"47",
 			"row":"24",
 			"division":"atlantic"
    		},
    		{
 			"name":"Sharks",
-			"points":"55",
-			"gp":"45",
-			"row":"16",
+			"points":"57",
+			"gp":"47",
+			"row":"17",
 			"division":"atlantic"
    		},
    		{
 			"name":"Stars",
 			"points":"48",
-			"gp":"45",
+			"gp":"46",
 			"row":"20",
 			"division":"atlantic"
    		},
    		{
 			"name":"Coyotes",
-			"points":"46",
-			"gp":"45",
-			"row":"15",
+			"points":"48",
+			"gp":"46",
+			"row":"16",
 			"division":"atlantic"
    		}
    	]
