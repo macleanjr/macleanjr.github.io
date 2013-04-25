@@ -1,48 +1,7 @@
 {
   "games":[
 
-		{
-			"gameid":"19",
-			"home":"Blues",
-			"away":"Avalanche",
-			"date":"4/23"
-		},
-		{
-			"gameid":"20",
-			"home":"Predators",
-			"away":"Flames",
-			"date":"4/23"
-		},
-		{
-			"gameid":"21",
-			"home":"Wild",
-			"away":"Kings",
-			"date":"4/23"
-		},
-		{
-			"gameid":"22",
-			"home":"Sharks",
-			"away":"Stars",
-			"date":"4/23"
-		},
-		{
-			"gameid":"23",
-			"home":"RedWings",
-			"away":"Kings",
-			"date":"4/24"
-		},
-		{
-			"gameid":"24",
-			"home":"Oilers",
-			"away":"Blackhawks",
-			"date":"4/24"
-		},
-		{
-			"gameid":"25",
-			"home":"Coyotes",
-			"away":"Sharks",
-			"date":"4/24"
-		},
+		
 		{
 			"gameid":"26",
 			"home":"RedWings",
