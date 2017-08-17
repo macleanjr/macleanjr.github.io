@@ -7,23 +7,24 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Day', 'Hours'],
-          ['0',  122],
-          ['1', 116],
-          ['2',null],
-          ['3',null],
-               ['4',null],
-               ['5',null],
-               ['6',null],
-               ['7',null],
-               ['8',null],
-               ['9',null],
-               ['10',null]
+          ['0',  122, 122],
+          ['1', 116, null],
+          ['2',null, null],
+          ['3',null, null],
+               ['4',null, null],
+               ['5',null, null],
+               ['6',null, null],
+               ['7',null, null],
+               ['8',null, null],
+               ['9',null, null],
+               ['10',null, 0]
         ]);
 
         var options = {
           title: 'Sprint 3 Burndown',
           hAxis: {title: 'Day',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
+          vAxis: {minValue: 0},
+          series: {2: {type: 'line'}}
         };
 
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
