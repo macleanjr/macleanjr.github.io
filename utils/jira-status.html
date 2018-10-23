@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>JIRA Status</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#go').click(function() {
+                getStatusTimes();
+
+            });
+
+        });
+
+        function getStatusTimes() {
+            var issueKey = $('#issue-key').val();
+            var createdOnDate;
+            var currentStatus = null;
+            //get the created on date first
+            $.getJSON("https://thetower.atlassian.net/rest/api/3/issue/" + issueKey, function(data) {
+                createdOnDate = new Date(data.fields.created);
+                console.log("Created on : " + createdOnDate);
+                //now get the changelog
+                $.getJSON("https://thetower.atlassian.net/rest/api/3/issue/" + issueKey + "/changelog", function(data) {
+                    $.each(data.values, function() {
+                        if (this.items[0].field == "status") {
+                            console.log(this);
+                        }
+                    });
+                });
+
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+    Issue Key: <input type="text" id="issue-key" /> <button id="go">Go</button><br/>
+    <div id="output"></div>
+</body>
+
+</html>
