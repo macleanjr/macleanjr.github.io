@@ -29,12 +29,84 @@
         });
 
     </script>
+    <style>
+        .flex-grid {
+            display: flex;
+        }
+
+        .col {
+            flex: 1;
+
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: row;
+            min-height: 150px;
+        }
+
+        .instructions+div {
+            width: calc(100% - 250px);
+            text-align: center;
+            vertical-align: center;
+            flex: auto;
+
+        }
+
+        .instructions {
+            width: 250px;
+            text-align: center;
+        }
+
+        #output {
+            margin-left: 20px;
+            width: 100%;
+            height: 85px;
+        }
+
+        #generate {
+            font-size: 24px;
+            height: 50px;
+            width: 150px;
+        }
+
+    </style>
 </head>
 
 <body>
-    Names (comma separated): <input type="text" id="names" /><br/><br/><br/>
-    <button id="generate">Generate</button><br/><br/><br/>
-    <textarea id="output"></textarea><br/><br/><br/> Copy this text and create a new bookmark in your chrome bookmark bar with the code above as the URL
+    <div class="flex-grid">
+        <div class="col"></div>
+        <div class="col" style="flex:auto;width:450px;">
+
+            <div class="steps">
+                <div class="step">
+                    <div class="instructions"><strong>Step 1</strong><br/><br/>
+                        </br/>Enter the names you wish to appear on the confluence calendar exactly as they appear, separated by a comma.</div>
+                    <div>Names: <input type="text" id="names" /><br/><br/><br/></div>
+                </div>
+
+                <div class="step">
+                    <div class="instructions"><strong>Step 2</strong><br/><br/>
+                    </div>
+                    <div><button id="generate">Generate</button><br/><br/><br/></div>
+                </div>
+
+                <div class="step">
+                    <div class="instructions"><strong>Step 3</strong><br/><br/>Copy this text and create a new bookmark in your chrome bookmark bar with the code above as the URL
+                    </div>
+                    <div><textarea id="output"></textarea><br/><br/><br/> </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col"></div>
+    </div>
 </body>
 
 </html>
