@@ -135,4 +135,17 @@ header span {
         float: none;
         text-align: center;
     }
+
+    .boxes {
+        float: none;
+        width: auto;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+    .boxes:last-of-type {
+        margin-right: 20px;
+        width: auto;
+
+    }
 }
