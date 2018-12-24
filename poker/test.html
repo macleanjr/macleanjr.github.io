@@ -2,7 +2,9 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
-$(document).onready(function(){
+    var version = "0.0.1";
+$(document).ready(function(){
+    $("#status").append("Version " + version + "<br/>");
 $('#connect').click(function(){
 $('#status').append("attempting to connect<br/>");
 connectWs();
