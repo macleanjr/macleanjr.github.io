@@ -3,7 +3,7 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
-        var version = "0.0.3";
+        var version = "0.0.4";
         var socket;
         $(document).ready(function() {
             $("#status").append("Version " + version + "<br/>");
@@ -14,6 +14,8 @@
 
 
             $("#1").click(function() {
+                var payload = "{\"action\":\"vote\", \"method\": \"vote\", \"vote\":\"1\"}";
+                $('#status').append("sending payload: " + payload + "<br/>");
                 socket.send("{\"action\":\"vote\", \"method\": \"vote\", \"vote\":\"1\"}");
             });
 
