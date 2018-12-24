@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).onready(function(){
+$('#connect').click(function(){
+$('#status').append("attempting to connect<br/>");
+connectWs();
+});
+});
+
+
+function connectWs(){
+const socket = new WebSocket('wss://gpb9s43yd2.execute-api.us-east-1.amazonaws.com/prod/');
+// Connection opened
+socket.addEventListener('open', function (event) {
+    $('#status').append("socket opened<br/>");
+});
+
+// Listen for messages
+socket.addEventListener('message', function (event) {
+    $('#status').append(event.data + "<br/>");
+});
+}
+</script>
+</head>
+<body>
+<button id="connect">Connect</button>
+<div id="status"></div>
+</body>
+</html>
