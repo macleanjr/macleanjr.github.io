@@ -3,7 +3,7 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
-        var version = "0.0.4";
+        var version = "0.0.5";
         var socket;
         $(document).ready(function() {
             $("#status").append("Version " + version + "<br/>");
@@ -26,6 +26,9 @@
             // Connection opened
             socket.addEventListener('open', function(event) {
                 $('#status').append("socket opened<br/>");
+                var payload = "{\"action\":\"register\", \"name\": \"" + $("#name").val() + "\"}";
+                $('#status').append("sending payload: " + payload + "<br/>");
+                socket.send(payload);
             });
             // Listen for messages
             socket.addEventListener('message', function(event) {
