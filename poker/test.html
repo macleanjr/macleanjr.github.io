@@ -3,22 +3,49 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="poker.js"></script>
+    <style>
+        body{
+            background-color:#eee;
+        }
+        .vote {
+            font-size:18px;
+            width:65px;
+            margin-right:10px;
+            margin-top:15px;
+        }
+    </style>
 </head>
 
 <body>
-    Name: <input type="text" id="name" /><br />
-    <button id="connect">Connect</button><br /><br />
+    <div id="wrapper" style="width:100%;">
 
-    <button class="vote" data-vote="1">1</button>
-    <button class="vote" data-vote="2">2</button>
-    <button class="vote" data-vote="3">3</button>
-    <button class="vote" data-vote="5">5</button>
-    <button class="vote" data-vote="8">8</button>
-    <button class="vote" data-vote="13">13</button>
-    <button class="vote" data-vote="?">?</button>
+        <div id="inner" style="width:700px; margin: 0 auto;">
+            <div id="left" style="float:left;width:calc(50% - 30px);background-color:#fff;padding:10px;">Name: <input type="text" id="name" style="width:200px;" />
+                <button id="connect">Connect</button><br />
+                <button class="vote" data-vote=".5">.5</button>
+                <button class="vote" data-vote="1">1</button>
+                <button class="vote" data-vote="2">2</button>
+                <button class="vote" data-vote="3">3</button><br />
+                <button class="vote" data-vote="5">5</button>
+                <button class="vote" data-vote="8">8</button>
+                <button class="vote" data-vote="13">13</button>
+                <button class="vote" data-vote="?">?</button><br />
+                <button class="vote" data-vote="S">S</button>
+                <button class="vote" data-vote="M">M</button>
+                <button class="vote" data-vote="L">L</button>
+                <button class="vote" data-vote="XL">XL</button>
 
-    <button id="clear">Clear Votes</button><br /><br />
-    <div id="status"></div>
+                <br /><br /><button id="clear">Clear Votes</button><br /><br />
+                <div id="status"></div>
+            </div>
+            <div id="right" style="margin-left:20px;float:right; width:calc(50% - 30px);background-color:#fff;padding:10px;">
+                <div id="results"></div>
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 
 </html>
