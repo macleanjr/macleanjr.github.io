@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-var version = "0.0.8";
+var version = "0.0.9";
 var socket;
 $(document).ready(function () {
     $("#status").append("Version " + version + "<br/>");
@@ -10,8 +10,8 @@ $(document).ready(function () {
     });
 
 
-    $("#1").click(function () {
-        var payload = "{\"action\":\"vote\", \"method\": \"vote\", \"vote\":\"1\", \"name\": \"" + $("#name").val() + "\"}";
+    $(".vote").click(function () {
+        var payload = "{\"action\":\"vote\", \"method\": \"vote\", \"vote\":\"" + $(this).data("vote") + "\", \"name\": \"" + $("#name").val() + "\"}";
         $('#status').append("sending payload: " + payload + "<br/>");
         socket.send(payload);
     });
