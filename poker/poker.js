@@ -1,4 +1,6 @@
-var version = "0.0.7";
+/* eslint-disable */
+
+var version = "0.0.8";
 var socket;
 $(document).ready(function () {
     $("#status").append("Version " + version + "<br/>");
@@ -29,4 +31,15 @@ function connectWs() {
     socket.addEventListener('message', function (event) {
         $('#status').append(event.data + "<br/>");
     });
+
+    socket.addEventListener('close', function (event) {
+        $('#status').append("socket closed<br/>");
+
+    });
+
+    socket.onerror = function (e) {
+        $('#status').append("WebSocket Error: ", e);
+        //Custom function for handling errors
+
+    };
 }
