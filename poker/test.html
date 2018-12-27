@@ -7,21 +7,69 @@
         body{
             background-color:#3ebec4;
         }
+        #wrapper {
+        	width: 100%;
+        }
+        #inner {
+        	width: 700px;
+        	margin: 0 auto;
+        }
+        #title {
+        	width: 100%;
+        	padding: 10px;
+        	text-align: center;
+        	font-size: 32px;
+        	color: #fff;
+        }
+        #left {
+        	float:left;
+        	width:calc(50% - 30px);
+        	min-height: 325px;
+        	background-color: #fff;
+        	padding: 10px;
+        }
+        #right {
+        	float:right;
+        	margin-left: 20px;
+        	width:calc(50% - 30px);
+        	min-height: 325px;
+        	background-color: #DEDBDB;
+        	padding:10px;
+        }
+        #name {
+        	width: 250px;
+        	height: 25px;
+        	margin-top: 5px;
+        	margin-bottom: 5px;
+        }
         .vote {
             font-size:18px;
             width:65px;
             margin-right:10px;
             margin-top:15px;
         }
+        #connect {
+        	font-size: 12px;
+        	margin-top: 5px;
+        }
+        .clear {
+        	font-size: 12px;
+        	margin-top: 5px;
+        }
     </style>
 </head>
 
 <body>
-    <div id="wrapper" style="width:100%;">
+    <div id="wrapper">
 
-        <div id="inner" style="width:700px; margin: 0 auto;">
-            <div id="left" style="float:left;width:calc(50% - 30px);background-color:#fff;padding:10px;">Name: <input type="text" id="name" style="width:200px;" />
-                <button id="connect">Connect</button><br />
+        <div id="inner">
+        	<div id="title">MediaOS Pointing Poker</div>
+        	
+            <div id="left">Your Name <input type="text" id="name"/>
+                <button id="connect">Connect to Game</button><br />
+                <br />
+                <b>Points<b>
+                <br />
                 <button class="vote" data-vote=".5">.5</button>
                 <button class="vote" data-vote="1">1</button>
                 <button class="vote" data-vote="2">2</button>
@@ -38,7 +86,7 @@
                 <br /><br /><button id="clear">Clear Votes</button><br /><br />
                 <div id="status"></div>
             </div>
-            <div id="right" style="margin-left:20px;float:right; width:calc(50% - 30px);background-color:#fff;padding:10px;">
+            <div id="right">
                 <div id="results"></div>
             </div>
 
