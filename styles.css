@@ -1,0 +1,39 @@
+.color1 > rect {
+    background-color: #2176AE;
+    fill: #2176AE;
+}
+
+.color2 > rect {
+    background-color: #B66D0D;
+    fill: #B66D0D;
+}
+
+.color3 > rect {
+    background-color: #FBB13C;
+    fill: #FBB13C;
+}
+
+.color4 > rect {
+    background-color: #FE6847;
+    fill: #FE6847;
+}
+
+.color5 > rect {
+    background-color: #468C98;
+    fill: #468C98;
+}
+
+.color6 > rect {
+    background-color: #476C9B;
+    fill: #476C9B;
+}
+
+
+
+
+
+/* 57B8FF
+
+B66D0D
+FBB13C
+FE6847*/
