@@ -1,3 +1,5 @@
+/* project colors */
+
 .color1 > rect {
     background-color: #2176AE;
     fill: #2176AE;
@@ -28,12 +30,10 @@
     fill: #476C9B;
 }
 
-
-
-
-
-/* 57B8FF
-
-B66D0D
-FBB13C
-FE6847*/
+.headshot {
+    float: right;
+    border-radius: 50%;
+    height: 125px;
+    margin: 20px;
+    margin-top: 0;
+}
