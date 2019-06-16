@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
 
     <title>Github Labels in Jira | Jason MacLean</title>
 </head>
@@ -45,19 +45,51 @@
                 </div>
 
                 <div class="col">
-                    <a href="https://chrome.google.com/webstore/detail/pfgmdhnlmmbeombfpoljnoeafjmoamdj/"><img src="/assets/images/ChromeWebStore_BadgeWBorder_v2_496x150.png" style="width:206px;" /></div></a>
+                    <a href="https://chrome.google.com/webstore/detail/pfgmdhnlmmbeombfpoljnoeafjmoamdj/"><img src="/assets/images/ChromeWebStore_BadgeWBorder_v2_496x150.png" style="width:206px;" /></a>
+                </div>
             </div>
             <div class="row py-2 px-2">
                 <div class="col mx-2 p-2" style="background-color:#9FA2B2;color:#fff;font-size:12px;border-radius: 5px;">The Github Label Extension in JIRA has saved me countless time, headaches, and confusion. Now in one glance I can have total insight into where my team's tickets stand while they wait for reviews from the team! <br />
                     <div class="py-2"><img src="jonk.jpeg" style="float:left;border-radius: 50%;height:50px;margin-right:10px;margin-top:0;" /><b>Jon K.</b><br /><i>Senior Product Manager</i></div>
                 </div>
             </div>
-
-
         </div>
+        <div class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 py-3">
+                        <h2>Features</h2>
+                        Pull request number, status, and repo are added for each associated PR.
+                    </div>
+                    <div class="col-md-12 py-3">
+                        <h2>Installation</h2>
+                        After installing from the Chrome Web Store, add your GitHub access token in extension settings.<br /><br />
 
-
-
+                        Creating a Github Access Token<br />
+                        1. https://github.com/settings/tokens ← Navigate here<br />
+                        2. Click Generate New Token<br />
+                        3. Re-enter your password<br />
+                        4. Give your token a description (e.g. Label chrome extension)<br />
+                        5. Select the repos scope<br />
+                        6. Click Generate Token<br />
+                        7. Copy the token<br />
+                        8. Paste this token in the extension options<br />
+                        <br />
+                        Prerequisites:<br />
+                        * Only available on Classic JIRA projects -- next-gen is not supported<br />
+                        * JIRA GitHub integration has been configured and user is able to see associated PR's (Use smart commits!)<br />
+                    </div>
+                    <div class="col-md-12 py-3">
+                        <h4>Changelog</h4>
+                        <span class="badge badge-primary">0.11.0</span><span class="release-date">6/14/19</span><br />
+                        <div class="changelog">
+                            <b>Added</b><br />
+                            &bull; Happy Pride Month! Toggle the pride feature flag to add a rainbow background to Read to Merge labels.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
     </main>
